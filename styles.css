@@ -1,0 +1,193 @@
+/* ===========================================================
+    RESET
+    Remove as margens e paddings padrão dos elementos,
+    define o box-sizing para facilitar layouts e aplica a fonte global.
+=========================================================== */
+* {
+     margin: 0; /* Remove margem padrão */
+     padding: 0; /* Remove padding padrão */
+     box-sizing: border-box; /* Inclui borda e padding no tamanho total */
+     font-family: "Montserrat", sans-serif; /* Fonte padrão */
+}
+
+/* ===========================================================
+    BODY
+    Define cor de fundo, cor do texto e altura mínima da página.
+=========================================================== */
+body {
+     background: #111111; /* Cor de fundo clara */
+     color: #fffcfc; /* Cor do texto principal */
+     min-height: 100vh; /* Altura mínima igual à tela */
+}
+
+/* ===========================================================
+    HEADER
+    Centraliza o conteúdo do cabeçalho e aplica espaçamento.
+=========================================================== */
+.header {
+     width: 100%; /* Ocupa toda a largura */
+     display: flex; /* Usa flexbox para alinhamento */
+     justify-content: center; /* Centraliza horizontalmente */
+     padding: 30px 20px; /* Espaçamento interno */
+}
+
+/* ===========================================================
+    NAVBAR
+    Barra de navegação com fundo branco, espaçamento e sombra.
+=========================================================== */
+.nav {
+     width: 100%; /* Ocupa toda a largura */
+     max-width: 1200px; /* Limite máximo de largura */
+     display: flex; /* Flexbox para alinhamento */
+     align-items: center; /* Alinha itens verticalmente */
+     justify-content: space-between; /* Espaça itens */
+     background: white; /* Fundo branco */
+     padding: 20px 40px; /* Espaçamento interno */
+     border-radius: 12px; /* Bordas arredondadas */
+     box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Sombra suave */
+}
+
+/* ===========================================================
+    NAV LINKS
+    Links de navegação alinhados em linha com espaçamento.
+=========================================================== */
+.nav-links {
+     display: flex; /* Flexbox para alinhamento */
+     gap: 30px; /* Espaço entre os links */
+}
+
+/* ===========================================================
+    LINK HEADER
+    Estiliza os links do cabeçalho com cor, tamanho e efeito hover.
+=========================================================== */
+.link-header {
+     font-weight: 600; /* Negrito */
+     font-size: 18px; /* Tamanho da fonte */
+     color: #665AE1; /* Cor inicial */
+     text-decoration: none; /* Remove sublinhado */
+     cursor: pointer; /* Cursor de mão */
+     transition: color 0.3s; /* Transição suave de cor */
+}
+
+.link-header:hover {
+     color: #222; /* Cor ao passar o mouse */
+}
+
+/* ===========================================================
+    LOGIN BUTTON
+    Botão de login com gradiente, bordas arredondadas e efeito hover.
+=========================================================== */
+.button-header {
+     background: linear-gradient(90deg, #665AE1, #8a7fff); /* Gradiente */
+     border: none; /* Sem borda */
+     padding: 10px 25px; /* Espaçamento interno */
+     border-radius: 8px; /* Bordas arredondadas */
+     color: white; /* Texto branco */
+     font-weight: 600; /* Negrito */
+     cursor: pointer; /* Cursor de mão */
+     transition: transform 0.3s; /* Transição suave de escala */
+}
+
+.button-header:hover {
+     transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
+}
+
+/* ===========================================================
+    HERO SECTION
+    Área principal com imagem e texto lado a lado.
+=========================================================== */
+.hero {
+     max-width: 1200px; /* Limite de largura */
+     margin: auto; /* Centraliza na página */
+     display: flex; /* Flexbox para alinhamento */
+     align-items: center; /* Alinha verticalmente */
+     justify-content: space-between; /* Espaça elementos */
+     padding: 60px 20px; /* Espaçamento interno */
+     gap: 40px; /* Espaço entre imagem e texto */
+}
+
+/* ===========================================================
+    HERO TEXT AREA
+    Área de texto do hero, limita largura e estiliza títulos e parágrafos.
+=========================================================== */
+.hero-text {
+     max-width: 500px; /* Limite de largura */
+}
+
+.hero-text h1 {
+     font-size: 56px; /* Tamanho grande */
+     font-weight: 700; /* Negrito */
+     color: #665AE1; /* Cor destaque */
+}
+
+.hero-text h2 {
+     font-size: 32px; /* Tamanho médio */
+     margin-top: 10px; /* Espaço acima */
+     color: #fffcfc; /* Cor secundária */
+}
+
+.hero-text p {
+     margin-top: 20px; /* Espaço acima */
+     font-size: 18px; /* Tamanho do texto */
+     line-height: 28px; /* Altura da linha */
+     color: #ffffff; /* Cor do texto */
+}
+
+/* ===========================================================
+    EXPLORE BUTTON
+    Botão de ação na seção hero, com cor, borda arredondada e efeito hover.
+=========================================================== */
+.button-explore {
+     margin-top: 30px; /* Espaço acima */
+     padding: 14px 35px; /* Espaçamento interno */
+     border: none; /* Sem borda */
+     background: #665AE1; /* Cor de fundo */
+     color: white; /* Texto branco */
+     font-weight: 600; /* Negrito */
+     border-radius: 8px; /* Bordas arredondadas */
+     cursor: pointer; /* Cursor de mão */
+     transition: background 0.3s, transform 0.3s; /* Transições suaves */
+}
+
+.button-explore:hover {
+     background: #5348c7; /* Cor ao passar o mouse */
+     transform: scale(1.05); /* Aumenta levemente */
+}
+
+/* ===========================================================
+    HERO IMAGE
+    Área da imagem principal, centraliza a logo.
+=========================================================== */
+.hero-image {
+     flex: 1; /* Ocupa espaço disponível */
+     display: flex; /* Flexbox */
+     justify-content: center; /* Centraliza imagem */
+}
+
+.logo-image {
+     width: 100%; /* Ocupa toda a largura */
+     max-width: 520px; /* Limite de largura */
+}
+
+/* ===========================================================
+    RESPONSIVE DESIGN
+    Ajusta layout para telas menores (até 900px).
+=========================================================== */
+@media (max-width: 900px) {
+     .hero {
+          flex-direction: column; /* Empilha elementos */
+          text-align: center; /* Centraliza texto */
+     }
+
+     .nav-links {
+          display: none; /* Esconde links de navegação */
+     }
+
+     .hero-text h1 {
+          font-size: 40px; /* Reduz tamanho do título */
+     }
+
+     .hero-text h2 {
+          font-size: 24px; /* Reduz tamanho do subtítulo */
+     }
+}
