@@ -15,7 +15,7 @@
     Define cor de fundo, cor do texto e altura mínima da página.
 =========================================================== */
 body {
-     background: #111111; /* Cor de fundo clara */
+     background: #1d269e44; /* Cor de fundo clara */
      color: #fffcfc; /* Cor do texto principal */
      min-height: 100vh; /* Altura mínima igual à tela */
 }
